@@ -1,18 +1,21 @@
 # Utiliser une image Node.js officielle
 FROM node:18-alpine
 
+# Installer Git avec apk (gestionnaire de paquets pour Alpine)
+RUN apk add --no-cache git
+
 # Définir le répertoire de travail
 WORKDIR /app
 
-# Installer les dépendances
+# Copier les fichiers package.json et package-lock.json, installer les dépendances en tant que root
 COPY package*.json ./
+
+#Installer les dépendances
 RUN npm install
 
-# Copier le reste des fichiers
-COPY . .
 
-# Exposer le port 3000
+# Exposer le port
 EXPOSE 3000
 
-# Commande pour démarrer l'application avec hot reload
+# Lancer l'application
 CMD ["npm", "run", "dev"]

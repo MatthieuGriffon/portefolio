@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Full-Stack Developer Portfolio
 
-## Getting Started
+Welcome to my Full-Stack Developer Portfolio project! This project showcases my skills and expertise in web development, featuring a collection of my work, a blog, and a contact form. The project is built using modern web technologies and follows best practices for performance, security, and scalability.
 
-First, run the development server:
+## Table of Contents
+- [Full-Stack Developer Portfolio](#full-stack-developer-portfolio)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Technologies Used](#technologies-used)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Development Workflow](#development-workflow)
+  - [Deployment](#deployment)
+  - [Contributing](#contributing)
+  - [License](#license)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
+- **Home Page**: An introduction and overview of my skills and experiences.
+- **About Page**: A detailed description of my professional background.
+- **Projects Page**: A gallery showcasing my completed projects with descriptions and links.
+- **Blog**: A section where I share articles, tutorials, and insights.
+- **Contact Form**: A form for visitors to get in touch with me.
+- **Comments System**: Allows users to leave comments on blog posts.
+- **Emoji Reactions**: Users can react to blog posts with emojis.
+- **Social Sharing**: Blog posts can be shared on social media platforms.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
+- **Frontend**:
+  - [Next.js](https://nextjs.org/) (React-based framework)
+  - SASS/SCSS for styling
+- **Backend**:
+  - Next.js API routes for backend logic
+  - JWT and Auth0 for authentication
+- **Database**:
+  - [PostgreSQL](https://www.postgresql.org/) for data storage
+- **Deployment**:
+  - Docker and Docker Compose for containerization
+- **Testing**:
+  - Jest for unit and integration tests
+- **Monitoring**:
+  - Prometheus for application monitoring
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To run this project locally, follow these steps:
 
-## Learn More
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/MatthieuGriffon/portefolio.git
+    cd portefolio
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Set up environment variables**:
+    - Create a `.env.local` file in the root directory.
+    - Add your environment variables (e.g., database connection strings, API keys).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Start the development server**:
+    ```bash
+    npm run dev
+    ```
 
-## Deploy on Vercel
+5. **Access the application**:
+    - Open your browser and navigate to `http://localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Home Page**: Introduces your skills and provides navigation to other sections.
+- **About Page**: Details your professional journey and expertise.
+- **Projects Page**: Displays your work with links to live projects or repositories.
+- **Blog**: Browse and read articles, tutorials, and technical insights.
+- **Contact Form**: Send a message directly from the website.
+
+## Development Workflow
+
+This project is dockerized to ensure a consistent development environment.
+
+1. **Start the development environment**:
+    ```bash
+    docker-compose -f .devcontainer/docker-compose.dev.yml up --build
+    ```
+
+2. **Hot Reloading**:
+    - The development server supports hot reloading, so changes made to the code will be reflected in real-time.
+
+3. **Running Tests**:
+    ```bash
+    npm run test
+    ```
+
+## Deployment
+
+To deploy this project, follow these steps:
+
+1. **Build the Docker image**:
+    ```bash
+    docker build -t yourusername/portefolio:latest .
+    ```
+
+2. **Push the Docker image to a registry**:
+    ```bash
+    docker push yourusername/portefolio:latest
+    ```
+
+3. **Deploy the container to your server**:
+    - Use Docker Compose or another orchestration tool to run the container on your production server.
+
+## Contributing
+
+Contributions are welcome! If you have any ideas or suggestions, feel free to fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

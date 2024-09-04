@@ -23,7 +23,7 @@ export default function Header() {
             <Image src="/logo.png" alt="Logo" width={60} height={60} />
           </Link>
         </div>
-        <h1 className="title">Portfolio</h1>
+        <h1 className="title">Developer Portfolio</h1>
         <div className="menu-icon" onClick={toggleMenu}>
           <div className={menuActive ? "bar active" : "bar"}></div>
           <div className={menuActive ? "bar active" : "bar"}></div>

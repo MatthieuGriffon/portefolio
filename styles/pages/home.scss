@@ -9,11 +9,6 @@
     text-align: center;
     margin-bottom: 0.8rem;
 
-    @media (min-width: 768px) {
-      flex-direction: row;
-      text-align: left;
-    }
-
     .presentation {
       max-width: 500px;
       margin-top: 1rem;
@@ -88,8 +83,6 @@
       max-width: 80px;
       height: auto;
       animation: slideInFromRight 1s ease-in-out forwards, bounce 0.5s ease-in-out 1s forwards, pulse 2s infinite 1.5s;
-  
-      /* Vous pouvez également ajouter une transition pour un survol plus doux */
       transition: transform 0.3s ease-in-out;
     }
   }
@@ -104,6 +97,33 @@
   margin: auto;
   border: none;
   margin: 1rem auto;
+}
+
+@media (min-width: 768px) {
+  .home .intro {
+    padding: 0.5rem;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .home .intro .photo {
+    padding: 0.2rem;
+  }
+
+  .home .intro .presentation {
+    padding: 1rem;
+    p {
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+  .home .web-development-section .text {
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;}
+    
+  }
 }
 
 @keyframes fadeIn {
